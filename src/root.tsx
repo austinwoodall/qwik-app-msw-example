@@ -7,6 +7,9 @@ import {
 import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
+import {worker} from "~/mocks/browser";
+
+require('./mocks/browser');
 
 export default component$(() => {
   /**
@@ -15,6 +18,8 @@ export default component$(() => {
    *
    * Don't remove the `<head>` and `<body>` elements.
    */
+
+    worker.start();
 
   return (
     <QwikCityProvider>
